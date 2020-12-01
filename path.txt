@@ -1,0 +1,676 @@
+cd..
+cd..
+cd ST
+conda activate rasa
+
+
+
+- intent: movies
+  examples: |
+    - Batman Begins
+    - V for Vendetta
+    - Sin City
+    - Star Wars: Episode III - Revenge of the Sith
+    - Harry Potter and the Goblet of Fire
+    - Mr. & Mrs. Smith
+    - Charlie and the Chocolate Factory
+    - War of the Worlds
+    - The 40-Year-Old Virgin
+    - King Kong
+    - The Chronicles of Narnia: The Lion, the Witch and the Wardrobe
+    - Madagascar
+    - Wedding Crashers
+    - Brokeback Mountain
+    - Fantastic Four
+    - Constantine
+    - The Island
+    - Hitch
+    - Lord of War
+    - Serenity
+    - Kingdom of Heaven
+    - Pride & Prejudice
+    - Corpse Bride
+    - Walk the Line
+    - Saw II
+    - A History of Violence
+    - Kiss Kiss Bang Bang
+    - Thank You for Smoking
+    - Munich
+    - Match Point
+    - The Descent
+    - Transporter 2
+    - The Hitchhiker's Guide to the Galaxy
+    - Cinderella Man
+    - Jarhead
+    - Hostel
+    - The Longest Yard
+    - Hard Candy
+    - Flightplan
+    - Green Street Hooligans
+    - The Departed
+    - The Prestige
+    - 300
+    - Pirates of the Caribbean: Dead Man's Chest
+    - Pan's Labyrinth
+    - Casino Royale
+    - Blood Diamond
+    - X-Men: The Last Stand
+    - Children of Men
+    - The Pursuit of Happyness
+    - Little Miss Sunshine
+    - The Da Vinci Code
+    - The Devil Wears Prada
+    - Cars
+    - Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan
+    - The Lives of Others
+    - The Illusionist
+    - Inside Man
+    - Mission: Impossible III
+    - Night at the Museum
+    - Click
+    - Lucky Number Slevin
+    - Deja Vu
+    - Apocalypto
+    - Babel
+    - Superman Returns
+    - Ice Age: The Meltdown
+    - The Holiday
+    - The Fast and the Furious: Tokyo Drift
+    - Perfume: The Story of a Murderer
+    - Crank
+    - The Fountain
+    - Stranger Than Fiction
+    - Silent Hill
+    - Rocky Balboa
+    - Underworld: Evolution
+    - Saw III
+    - The Last King of Scotland
+    - Happy Feet
+    - Talladega Nights: The Ballad of Ricky Bobby
+    - Over the Hedge
+    - The Hills Have Eyes
+    - Letters from Iwo Jima
+    - She's the Man
+    - Idiocracy
+    - No Country for Old Men
+    - I Am Legend
+    - Ratatouille
+    - The Bourne Ultimatum
+    - Transformers
+    - Pirates of the Caribbean: At World's End
+    - Into the Wild
+    - Superbad
+    - There Will Be Blood
+    - Harry Potter and the Order of the Phoenix
+    - Spider-Man 3
+    - Juno
+    - Hot Fuzz
+    - Zodiac
+    - Live Free or Die Hard
+    - American Gangster
+    - Knocked Up
+    - Sweeney Todd: The Demon Barber of Fleet Street
+    - Ocean's Thirteen
+    - Shooter
+    - The Simpsons Movie
+    - 3:10 to Yuma
+    - The Mist
+    - Shrek the Third
+    - 28 Weeks Later
+    - 1408
+    - Stardust
+    - Fantastic 4: Rise of the Silver Surfer
+    - Gone Baby Gone
+    - Atonement
+    - Sunshine
+    - The Bucket List
+    - Eastern Promises
+    - Ghost Rider
+    - Paranormal Activity
+    - Disturbia
+    - National Treasure: Book of Secrets
+    - P.S. I Love You
+    - Fracture
+    - Resident Evil: Extinction
+    - The Darjeeling Limited
+    - The Golden Compass
+    - Grindhouse
+    - Enchanted
+    - The Dark Knight
+    - WALL�E
+    - Iron Man
+    - Slumdog Millionaire
+    - Gran Torino
+    - The Curious Case of Benjamin Button
+    - Taken
+    - Hancock
+    - The Incredible Hulk
+    - Twilight
+    - Indiana Jones and the Kingdom of the Crystal Skull
+    - The Hurt Locker
+    - Kung Fu Panda
+    - Quantum of Solace
+    - In Bruges
+    - Tropic Thunder
+    - Cloverfield
+    - Wanted
+    - Yes Man
+    - Pineapple Express
+    - Burn After Reading
+    - The Wrestler
+    - Jumper
+    - Seven Pounds
+    - Step Brothers
+    - Forgetting Sarah Marshall
+    - Hellboy II: The Golden Army
+    - Vicky Cristina Barcelona
+    - Changeling
+    - RocknRolla
+    - The Reader
+    - 21
+    - Valkyrie
+    - Role Models
+    - Rambo
+    - Mamma Mia!
+    - Body of Lies
+    - Ip Man
+    - Let the Right One In
+    - Get Smart
+    - Madagascar: Escape 2 Africa
+    - Death Race
+    - The Happening
+    - Revolutionary Road
+    - The Chronicles of Narnia: Prince Caspian
+    - You Don't Mess with the Zohan
+    - Inglourious Basterds
+    - Avatar
+    - Up
+    - The Hangover
+    - District 9
+    - Sherlock Holmes
+    - Star Trek
+    - Zombieland
+    - Watchmen
+    - 500 Days of Summer
+    - Harry Potter and the Half-Blood Prince
+    - X-Men Origins: Wolverine
+    - Transformers: Revenge of the Fallen
+    - 2012
+    - Terminator Salvation
+    - 3 Idiots
+    - Moon
+    - Up in the Air
+    - The Proposal
+    - The Blind Side
+    - Public Enemies
+    - Angels & Demons
+    - Law Abiding Citizen
+    - The Twilight Saga: New Moon
+    - Fast & Furious
+    - The Road
+    - Ice Age: Dawn of the Dinosaurs
+    - Knowing
+    - Mr. Nobody
+    - The Girl with the Dragon Tattoo
+    - The Ugly Truth
+    - Cloudy with a Chance of Meatballs
+    - G.I. Joe: The Rise of Cobra
+    - Fantastic Mr. Fox
+    - Coraline
+    - I Love You, Man
+    - The Secret in Their Eyes
+    - Orphan
+    - Drag Me to Hell
+    - The Taking of Pelham 123
+    - 17 Again
+    - Night at the Museum: Battle of the Smithsonian
+    - Surrogates
+    - He's Just Not That Into You
+    - Inception
+    - Shutter Island
+    - Toy Story 3
+    - Iron Man 2
+    - Black Swan
+    - How to Train Your Dragon
+    - The King's Speech
+    - The Social Network
+    - Kick-Ass
+    - Despicable Me
+    - Harry Potter and the Deathly Hallows: Part 1
+    - Tangled
+    - Alice in Wonderland
+    - Scott Pilgrim vs. the World
+    - Easy A
+    - The Town
+    - 127 Hours
+    - The Fighter
+    - The Expendables
+    - Due Date
+    - TRON: Legacy
+    - True Grit
+    - Salt
+    - The Book of Eli
+    - RED
+    - Insidious
+    - Prince of Persia: The Sands of Time
+    - Clash of the Titans
+    - Robin Hood
+    - The A-Team
+    - The Other Guys
+    - Grown Ups
+    - The Twilight Saga: Eclipse
+    - Megamind
+    - The Tourist
+    - Predators
+    - Machete
+    - Unstoppable
+    - Blue Valentine
+    - Shrek Forever After
+    - The Next Three Days
+    - Love & Other Drugs
+    - Knight and Day
+    - Percy Jackson & the Olympians: The Lightning Thief
+    - Get Him to the Greek
+    - Tucker and Dale vs Evil
+    - Harry Potter and the Deathly Hallows: Part 2
+    - The Intouchables
+    - Thor
+    - Captain America: The First Avenger
+    - X-Men: First Class
+    - Drive
+    - Limitless
+    - Rise of the Planet of the Apes
+    - Source Code
+    - Pirates of the Caribbean: On Stranger Tides
+    - Crazy, Stupid, Love
+    - The Hangover Part II
+    - Mission: Impossible - Ghost Protocol
+    - Warrior
+    - The Help
+    - Horrible Bosses
+    - Sherlock Holmes: A Game of Shadows
+    - The Girl with the Dragon Tattoo
+    - Midnight in Paris
+    - Transformers: Dark of the Moon
+    - The Cabin in the Woods
+    - In Time
+    - Moneyball
+    - Fast Five
+    - Friends with Benefits
+    - Super 8
+    - 50/50
+    - Hugo
+    - Real Steel
+    - Contagion
+    - Bridesmaids
+    - Green Lantern
+    - Kung Fu Panda 2
+    - Unknown
+    - The Adjustment Bureau
+    - The Grey
+    - Paul
+    - Rango
+    - The Descendants
+    - The Artist
+    - Sucker Punch
+    - I Am Number Four
+    - The Twilight Saga: Breaking Dawn - Part 1
+    - Just Go with It
+    - A Separation
+    - The Dark Knight Rises
+    - Django Unchained
+    - The Avengers
+    - The Hunger Games
+    - The Hobbit: An Unexpected Journey
+    - Silver Linings Playbook
+    - Skyfall
+    - Life of Pi
+    - Argo
+    - Ted
+    - Prometheus
+    - The Amazing Spider-Man
+    - Looper
+    - 21 Jump Street
+    - The Perks of Being a Wallflower
+    - Wreck-It Ralph
+    - Brave
+    - Cloud Atlas
+    - Men in Black 3
+    - Flight
+    - Moonrise Kingdom
+    - Les Mis�rables
+    - Jack Reacher
+    - The Expendables 2
+    - Taken 2
+    - The Bourne Legacy
+    - Pitch Perfect
+    - The Hunt
+    - The Dictator
+    - Snow White and the Huntsman
+    - Zero Dark Thirty
+    - John Carter
+    - Dredd
+    - Dark Shadows
+    - The Place Beyond the Pines
+    - Lincoln
+    - Total Recall
+    - Seven Psychopaths
+    - Chronicle
+    - Battleship
+    - The Twilight Saga: Breaking Dawn - Part 2
+    - End of Watch
+    - Lawless
+    - Hotel Transylvania
+    - Sinister
+    - Safe House
+    - American Reunion
+    - The Impossible
+    - Ice Age: Continental Drift
+    - The Wolf of Wall Street
+    - Gravity
+    - Iron Man 3
+    - Man of Steel
+    - 12 Years a Slave
+    - The Hunger Games: Catching Fire
+    - The Hobbit: The Desolation of Smaug
+    - World War Z
+    - Now You See Me
+    - Prisoners
+    - Thor: The Dark World
+    - Frozen
+    - Her
+    - Oblivion
+    - The Great Gatsby
+    - Pacific Rim
+    - Star Trek Into Darkness
+    - American Hustle
+    - The Conjuring
+    - Dallas Buyers Club
+    - Rush
+    - The Wolverine
+    - Elysium
+    - Captain Phillips
+    - We're the Millers
+    - This Is the End
+    - Despicable Me 2
+    - Fast & Furious 6
+    - Monsters University
+    - Snowpiercer
+    - About Time
+    - The Secret Life of Walter Mitty
+    - The Hangover Part III
+    - Lone Survivor
+    - The World's End
+    - Olympus Has Fallen
+    - Kick-Ass 2
+    - Don Jon
+    - Escape Plan
+    - Ender's Game
+    - The Lone Ranger
+    - Warm Bodies
+    - Gangster Squad
+    - Interstellar
+    - Guardians of the Galaxy
+    - Gone Girl
+    - Captain America: The Winter Soldier
+    - Whiplash
+    - The Grand Budapest Hotel
+    - The Imitation Game
+    - X-Men: Days of Future Past
+    - Edge of Tomorrow
+    - Kingsman: The Secret Service
+    - Birdman or (The Unexpected Virtue of Ignorance)
+    - John Wick
+    - The Hobbit: The Battle of the Five Armies
+    - Ex Machina
+    - Nightcrawler
+    - Lucy
+    - American Sniper
+    - Divergent
+    - Fury
+    - The Amazing Spider-Man 2
+    - The Maze Runner
+    - Dawn of the Planet of the Apes
+    - The Hunger Games: Mockingjay - Part 1
+    - Big Hero 6
+    - The Theory of Everything
+    - Godzilla
+    - 22 Jump Street
+    - Maleficent
+    - The Fault in Our Stars
+    - Boyhood
+    - The Equalizer
+    - The Lego Movie
+    - The Interview
+    - How to Train Your Dragon 2
+    - Transformers: Age of Extinction
+    - Neighbors
+    - 300: Rise of an Empire
+    - Predestination
+    - Non-Stop
+    - Noah
+    - Transcendence
+    - RoboCop
+    - It Follows
+    - Teenage Mutant Ninja Turtles
+    - The Babadook
+    - Mad Max: Fury Road
+    - Star Wars: Episode VII - The Force Awakens
+    - The Martian
+    - Avengers: Age of Ultron
+    - The Revenant
+    - Inside Out
+    - Jurassic World
+    - Ant-Man
+    - The Hateful Eight
+    - Spotlight
+    - Spectre
+    - Sicario
+    - Room
+    - Furious 7
+    - The Big Short
+    - Mission: Impossible - Rogue Nation
+    - Fifty Shades of Grey
+    - Bridge of Spies
+    - The Hunger Games: Mockingjay - Part 2
+    - The Man from U.N.C.L.E.
+    - Terminator Genisys
+    - Creed
+    - Chappie
+    - Spy
+    - Maze Runner: The Scorch Trials
+    - The Intern
+    - The Divergent Series: Insurgent
+    - Southpaw
+    - Focus
+    - The Lobster
+    - San Andreas
+    - Minions
+    - Everest
+    - The Witch
+    - Ted 2
+    - Straight Outta Compton
+    - Jupiter Ascending
+    - Tomorrowland
+    - Black Mass
+    - The Danish Girl
+    - Cinderella
+    - Legend
+    - The Age of Adaline
+    - Steve Jobs
+    - Fantastic Four
+    - Deadpool
+    - Captain America: Civil War
+    - Batman v Superman: Dawn of Justice
+    - Suicide Squad
+    - Doctor Strange
+    - Arrival
+    - Rogue One: A Star Wars Story
+    - La La Land
+    - Zootopia
+    - Hacksaw Ridge
+    - Split
+    - Fantastic Beasts and Where to Find Them
+    - X-Men: Apocalypse
+    - Passengers
+    - 10 Cloverfield Lane
+    - The Nice Guys
+    - Moonlight
+    - Moana
+    - The Jungle Book
+    - The Accountant
+    - Now You See Me 2
+    - Manchester by the Sea
+    - Warcraft
+    - Finding Dory
+    - Sully
+    - Nocturnal Animals
+    - Star Trek Beyond
+    - The Conjuring 2
+    - Don't Breathe
+    - Lion
+    - Jason Bourne
+    - Me Before You
+    - Ghostbusters
+    - Hell or High Water
+    - Hidden Figures
+    - Captain Fantastic
+    - Your Name.
+    - Assassin's Creed
+    - The Magnificent Seven
+    - The Secret Life of Pets
+    - War Dogs
+    - Sausage Party
+    - The Promise
+    - The Girl on the Train
+    - Independence Day: Resurgence
+    - The Legend of Tarzan
+    - Logan
+    - Thor: Ragnarok
+    - Guardians of the Galaxy Vol. 2
+    - Star Wars: Episode VIII - The Last Jedi
+    - Wonder Woman
+    - Dunkirk
+    - Spider-Man: Homecoming
+    - Get Out
+    - Blade Runner 2049
+    - It
+    - Baby Driver
+    - Three Billboards Outside Ebbing, Missouri
+    - Justice League
+    - The Shape of Water
+    - Coco
+    - John Wick: Chapter 2
+    - Jumanji: Welcome to the Jungle
+    - Beauty and the Beast
+    - Kingsman: The Golden Circle
+    - Kong: Skull Island
+    - Pirates of the Caribbean: Dead Men Tell No Tales
+    - Alien: Covenant
+    - Lady Bird
+    - The Greatest Showman
+    - War for the Planet of the Apes
+    - Murder on the Orient Express
+    - Life
+    - Call Me by Your Name
+    - The Fate of the Furious
+    - Wind River
+    - Ghost in the Shell
+    - King Arthur: Legend of the Sword
+    - Mother!
+    - The Hitman's Bodyguard
+    - I, Tonya
+    - Atomic Blonde
+    - The Mummy
+    - Darkest Hour
+    - Bright
+    - Valerian and the City of a Thousand Planets
+    - Baywatch
+    - American Made
+    - Avengers: Infinity War
+    - Black Panther
+    - Deadpool 2
+    - Bohemian Rhapsody
+    - A Quiet Place
+    - Ready Player One
+    - Aquaman
+    - Green Book
+    - Venom
+    - Spider-Man: Into the Spider-Verse
+    - A Star Is Born
+    - Ant-Man and the Wasp
+    - Mission: Impossible - Fallout
+    - Solo: A Star Wars Story
+    - Annihilation
+    - Bird Box
+    - Jurassic World: Fallen Kingdom
+    - Incredibles 2
+    - Hereditary
+    - Fantastic Beasts: The Crimes of Grindelwald
+    - BlacKkKlansman
+    - Game Night
+    - Tomb Raider
+    - Ocean's 8
+    - The Favourite
+    - First Man
+    - Red Sparrow
+    - Upgrade
+    - The Meg
+    - Rampage
+    - Roma
+    - Crazy Rich Asians
+    - Searching
+    - Isle of Dogs
+    - Bumblebee
+    - The Equalizer 2
+    - Ralph Breaks the Internet
+    - Bad Times at the El Royale
+    - A Simple Favor
+    - Sicario: Day of the Soldado
+    - The Ballad of Buster Scruggs
+    - Vice
+    - Halloween
+    - The Nun
+    - The Predator
+    - Tag
+    - Joker
+    - Avengers: Endgame
+    - Once Upon a Time... In Hollywood
+    - Parasite
+    - Captain Marvel
+    - Knives Out
+    - 1917
+    - Star Wars: Episode IX - The Rise of Skywalker
+    - Spider-Man: Far from Home
+    - The Irishman
+    - Jojo Rabbit
+    - Ford v Ferrari
+    - John Wick: Chapter 3 - Parabellum
+    - Shazam!
+    - Marriage Story
+    - Alita: Battle Angel
+    - Aladdin
+    - Us
+    - Uncut Gems
+    - The Lion King
+    - Glass
+    - It Chapter Two
+    - The Gentlemen
+    - Toy Story 4
+    - Ad Astra
+    - Midsommar
+    - El Camino: A Breaking Bad Movie
+    - Jumanji: The Next Level
+    - Fast & Furious Presents: Hobbs & Shaw
+    - The Platform
+    - X-Men: Dark Phoenix
+    - Terminator: Dark Fate
+    - Pok�mon Detective Pikachu
+    - 6 Underground
+    - Zombieland: Double Tap
+    - Doctor Sleep
+    - Little Women
+    - The Lighthouse
+    - Rocketman
+    - Godzilla: King of the Monsters
+    - Frozen II
