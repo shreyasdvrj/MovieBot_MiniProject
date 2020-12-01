@@ -31,6 +31,13 @@ nlu:
     - bye bye
     - see you later
 
+- intent: thank
+  examples: |
+    - thank you
+    - thanks
+    - tnx
+    - much obliged
+
 - intent: affirm
   examples: |
     - yes
@@ -485,6 +492,7 @@ nlu:
     - sudo reboot
     - asdfgasd
     - asdfgasdas
+    
 
 #All moods
 - intent: Happy
@@ -565,6 +573,7 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - who are you
 
 #Recommendations
 - intent: ask_movie

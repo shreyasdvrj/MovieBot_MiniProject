@@ -39,6 +39,7 @@ intents:
 - Romance
 - out_of_scope
 - movie_details
+- thank
 
 
 responses:
@@ -57,22 +58,24 @@ responses:
   utter_anger:
   - text : Here are some movies to help with your anger
   utter_fear:
-  - text: Here are some movies to help with your fear
+  - text: Here are some movies to help with your fear :)
   utter_enjoyment:
-  - text: Here are some movies to help you enjoy
+  - text: Here are some movies to help you enjoy :D
   utter_goodbye:
   - text: Bye
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: I am a movie bot! :)
+  utter_thank:
+  - text: You're welcome! :D
   utter_movie:
   - buttons:
     - payload: genre
       title: Genre
-    - payload: rating
-      title: Rating
+    - payload: movie_details
+      title: Details
     - payload: similar
       title: Your suggestion
-    text: Based on what would you like the reccommendation?
+    text: Based on what would you like the info?
   utter_reply:
   - text: What type of genre do you want to watch
   utter_genre:
@@ -114,7 +117,12 @@ responses:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_details:
-  - text: for which movie do you want more details?
+  - text: For which movie do you want more details?
+  utter_end:
+  - text: Hope you liked the information!
+  utter_help:
+  - text: Sorry I couldn't be of any help. I will learn to be better :)
+
 actions:
 - action_hello_world
 - action_movie_genre
@@ -130,6 +138,7 @@ actions:
 - utter_greet
 - utter_happy
 - utter_iamabot
+- utter_thank
 - utter_sad
 - utter_excitement
 - utter_disgust
@@ -141,3 +150,5 @@ actions:
 - utter_reply
 - utter_default
 - utter_details
+- utter_end
+- utter_help

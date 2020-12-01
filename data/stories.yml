@@ -34,6 +34,11 @@ stories:
   - intent: greet
   - action: utter_greet
 
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_thank
+
 - story: Give movie
   steps:
   - intent: ask_movie
@@ -50,132 +55,157 @@ stories:
   - intent: Sad
   - action: utter_sad
   - action: action_movie_mood
+  - action: utter_end
 
 - story: Happy
   steps:
   - intent: Happy
   - action: utter_happy
   - action: action_movie_mood
+  - action: utter_end
 
 - story: Excitement
   steps:
   - intent: Excitement
   - action: utter_excitement
   - action: action_movie_mood
+  - action: utter_end
 
 - story: Disgust
   steps:
   - intent: Disgust
   - action: utter_disgust
   - action: action_movie_mood
+  - action: utter_end
 
 - story: Anger
   steps:
   - intent: Anger
   - action: utter_anger
   - action: action_movie_mood
+  - action: utter_end
 
 - story: Fear
   steps:
   - intent: Fear
   - action: utter_fear
   - action: action_movie_plot
+  - action: utter_end
 
 - story: Enjoyment
   steps:
   - intent: Enjoyment
   - action: utter_enjoyment
   - action: action_movie_mood
+  - action: utter_end
 
 - story: movie1
   steps:
   - intent: all_movie1
   - action: action_movie_plot
+  - action: utter_end
 
 - story: movie2
   steps:
   - intent: all_movie2
   - action: action_movie_plot
+  - action: utter_end
 
 - story: movie3
   steps:
   - intent: all_movie3
   - action: action_movie_plot
+  - action: utter_end
 
 - story: movie4
   steps:
   - intent: all_movie4
   - action: action_movie_plot
+  - action: utter_end
 
 - story: movie5
   steps:
   - intent: all_movie5
   - action: action_movie_plot
+  - action: utter_end
 
 - story: movie6
   steps:
   - intent: all_movie6
   - action: action_movie_plot
+  - action: utter_end
 
 - story: Type_Crime
   steps: 
   - intent: Crime
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Drama
   steps: 
   - intent: Drama
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Thriller
   steps: 
   - intent: Thriller
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Mystery
   steps: 
   - intent: Mystery
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_SciFi
   steps: 
   - intent: Sci-Fi
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Action
   steps: 
   - intent: Action
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Adventure
   steps: 
   - intent: Adventure
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Romance
   steps: 
   - intent: Romance
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Horror
   steps: 
   - intent: Horror
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Comedy
   steps: 
   - intent: Comedy
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Musical
   steps: 
   - intent: Musical
   - action: action_movie_genre
+  - action: utter_end
 
 - story: Type_Fantasy
   steps: 
   - intent: Fantasy
   - action: action_movie_genre
+  - action: utter_end
 
 - story: similarity
   steps:
@@ -183,6 +213,7 @@ stories:
   - action: utter_similar
   - action: action_listen
   - action: action_movie_plot
+  - action: utter_end
 
 - story: rating
   steps: 
@@ -191,6 +222,7 @@ stories:
   - action: action_listen
   - intent: affirm
   - action: action_movie_ratings
+  - action: utter_end
 
 - story: out_of_scope
   steps:
@@ -204,6 +236,7 @@ stories:
   - action: action_listen
   - intent: all_movie1
   - action: action_give_details
+  - action: utter_end
 
 - story: deatils2
   steps:
@@ -212,6 +245,7 @@ stories:
   - action: action_listen
   - intent: all_movie2
   - action: action_give_details
+  - action: utter_end
 
 - story: deatils3
   steps:
@@ -220,6 +254,7 @@ stories:
   - action: action_listen
   - intent: all_movie3
   - action: action_give_details
+  - action: utter_end
 
 - story: deatils4
   steps:
@@ -228,6 +263,7 @@ stories:
   - action: action_listen
   - intent: all_movie4
   - action: action_give_details
+  - action: utter_end
 
 - story: deatils5
   steps:
@@ -236,6 +272,7 @@ stories:
   - action: action_listen
   - intent: all_movie5
   - action: action_give_details
+  - action: utter_end
 
 - story: deatils6
   steps:
@@ -244,3 +281,18 @@ stories:
   - action: action_listen
   - intent: all_movie6
   - action: action_give_details
+  - action: utter_end
+
+- story: feedback_positive
+  steps:
+  - action: utter_end
+  - action: action_listen
+  - intent: affirm
+  - action: utter_thank
+
+- story: feedback_negative
+  steps:
+  - action: utter_end
+  - action: action_listen
+  - intent: deny
+  - action: utter_help

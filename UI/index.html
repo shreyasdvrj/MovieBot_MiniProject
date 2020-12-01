@@ -4,42 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieBot</title>
-    <style>
-      body, html {
-        height: 100%;
-        margin: 0;
-      }
-      
-      .bg {
-        /* The image used */
-        background-image: url("movie.jpg");
-      
-        /* Full height */
-        height: 100%; 
-      
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      </style>
+    <link rel="icon" href="video-player.ico"/>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
-  <div class="bg"></div>
+    
+
+    <h1 id="main">Movie Recommendation Bot</h1>
+    <div style="text-align: center;">
+      <img src="movie1.jpg" alt="movie" style="width: 600px; height: 340px;">
+    </div>
+    <h3 id="subhead">“CREATE YOUR OWN VISUAL STYLE… LET IT BE UNIQUE FOR YOURSELF AND YET IDENTIFIABLE TO OTHERS.”</h3>
+    
+
+    <div id="projectorContainer">
+      <div class="projectorLight">
+      <div class="cover"></div>
+      <div class="cover"></div>
+    </div>
+         
+    <div class="projectorBody">
+      <div class="lensHold"></div>
+      <div class="lens"></div>
+    </div>
+    <div class="filmDisk" id="film1">
+      <div class="fdBack">
+          <div class="fdFilm"></div>
+          <div class="fdBar"></div>
+          <div class="fdBar2"></div>
+          <div class="fdCover"></div>
+      </div>
+    </div>
+    <div class="filmDisk" id="film2">
+        <div class="fdBack">
+            <div class="fdFilm"></div>
+            <div class="fdBar"></div>
+            <div class="fdBar2"></div>
+            <div class="fdCover"></div>
+        </div>
+      </div>
+     </div>
+
+    <div id="featureContainer">
+      <h3 id="featureSubhead">FEATURES</h3>
+      <p id="info">Recommendation based on<br>
+          Genre<br>
+          Plot similarity<br>
+          Your mood while you talk<br><br><br>
+
+          You can ask the bot for details of a movie<br>
+          Ex - Cast, Plot, Rating etc
+    </div>
+
 
     <div id="webchat"></div>
     <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
     <script>
     WebChat.default.init({
     selector: "#webchat",
-    initPayload: "/get_started",
     customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
     socketUrl: "http://localhost:5005",
     socketPath: "/socket.io/",
     title: "Movie Bot",
-    subtitle: "IMDb Who",
+    subtitle: "",
     params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.
   })
 </script>
+
+<!--<div id="footer">
+  <span>Community of Data Science, PES University 2020&nbsp;&nbsp;|</span>&nbsp;&nbsp;
+  <a id="github" href="https://github.com/adimehta03/CODS">
+      <i class="fab fa-github" style="font-size:18px; color: white;"></i></a>
+   Include all the libraries, languages and frameworks used to build the website 
+  </div>-->
 </body>
 </html>

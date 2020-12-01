@@ -14,7 +14,6 @@ from rasa_sdk.executor import CollectingDispatcher
 import pandas as pd
 
 from sklearn.feature_extraction.text import TfidfVectorizer
-
 from sklearn.metrics.pairwise import linear_kernel
 
 from bs4 import BeautifulSoup as SOUP
@@ -24,6 +23,7 @@ import requests as HTTP
 import numpy as np
 
 import webbrowser
+import time
 
 class ActionHelloWorld(Action):
 
@@ -95,6 +95,7 @@ class ActionMovieGenre(Action):
             
         sent_str = sent_str.split(">")'''
         index=0
+        dispatcher.utter_message("Movies for genre {} are :\n".format(given))
         for i in key_list:
             dispatcher.utter_message("{} : {}\n".format(i,val_list[index]))
             index+=1
@@ -132,7 +133,7 @@ class ActionMoviePlot(Action):
             return metadata['Movie'].iloc[movie_indices]
 
         movie=tracker.latest_message.get('text')
-        print("Workssssssssss")
+        #print("Workssssssssss")
         
         '''sent_str = ""
         arr_length=len(key_list)
@@ -141,8 +142,12 @@ class ActionMoviePlot(Action):
             k+=1
             
         sent_str = sent_str.split(">")'''
-        dispatcher.utter_message("The recommendations are : \n{}".format(get_recommendations(movie)))
-    
+        obj=get_recommendations(movie)
+        count=1
+        dispatcher.utter_message("The recommendations for {} are :".format(movie))
+        for i in obj.array:
+            dispatcher.utter_message("{}. {}\n".format(count,i))
+            count+=1
 
         return []
 
@@ -424,11 +429,12 @@ class ActionMovieDetails(Action):
                 dispatcher.utter_message("\t Genre: {}  ".format(given_genre))
                 dispatcher.utter_message("\t\t\t Ratings: {} \n".format(given_rating))
                 dispatcher.utter_message("\t Release year:  {} \n".format(given_year[0]))
-                dispatcher.utter_message("\t Description: {} : \n".format(given_description[0]))
-                dispatcher.utter_message("\tDuration:  {}  \n".format(given_duration))
+                dispatcher.utter_message("\t Description: {} \n".format(given_description[0]))
+                dispatcher.utter_message("\tDuration:  {} minutes  \n".format(given_duration)[0])
                 dispatcher.utter_message("\tDirector: {}  \n".format(given_director))
                 dispatcher.utter_message("\tCast: {}  \n".format(given_cast))
                 dispatcher.utter_message("\tStream: {}  \n".format(given_stream[0]))
+                time.sleep(8)
                 webbrowser.open_new_tab(given_stream[0])
 
                 count=1
